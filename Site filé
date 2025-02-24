@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Mensagem</title>
+    <style>
+        body {
+            background-color: white; /* Fundo branco */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-image 1s ease-in-out;
+        }
+
+        #message {
+            display: none;
+            font-size: 100px;
+            color: red;
+            text-align: center;
+        }
+        
+        #button {
+            font-size: 20px;
+            padding: 15px 30px;
+            cursor: pointer;
+            background-color: red; /* Botão vermelho */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .landscape {
+            background-image: url('https://www.w3schools.com/w3images/mountains.jpg'); /* Imagem de paisagem */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="button" onclick="showMessage()">Click here</button>
+    <div id="message">FUCK YOU</div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+            document.body.classList.add('landscape'); // Adiciona a classe para mudar o fundo
+        }
+    </script>
+
+</body>
+</html>
